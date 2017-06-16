@@ -29,10 +29,10 @@ namespace SuperAdventure
 
         }
 
-        //private void SuperAdventure_Load(object sender, EventArgs e)
-        //{
+        private void SuperAdventure_Load(object sender, EventArgs e)
+        {
 
-        //}
+        }
 
     }
 }
