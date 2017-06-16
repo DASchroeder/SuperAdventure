@@ -6,12 +6,25 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Player : LivingCreature
+    public class Player : LivingCreature  //Child class from LivingCreature
     {
-
+        //Properties of Player class
         public int Gold { get; set; }
         public int ExperiencePoints { get; set; }
         public int Level { get; set; }
+        public List<InventoryItem> Inventory { get; set; }
+        public List<PlayerQuest> Quests { get; set; }
+
+        //Constructor
+        public Player(int currentHitPoints, int maximumHitPoints, int gold, int experiencePoints,
+            int level) : base(currentHitPoints, maximumHitPoints)
+        {
+            Gold = gold;
+            ExperiencePoints = experiencePoints;
+            Level = level;
+            Inventory = new List<InventoryItem>();
+            Quests = new List<PlayerQuest>();
+        }
 
     }
 }

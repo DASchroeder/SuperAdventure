@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class HealingPotion : Item
+    public class HealingPotion : Item  //Child class from Itemclass
     {
         public int AmountToHeal { get; set; }
+
+        //Constructor
+        public HealingPotion(int id, string name, string namePlural, int amountToHeal) 
+            : base(id, name, namePlural)
+        {
+            AmountToHeal = amountToHeal;
+        }
     }
 }

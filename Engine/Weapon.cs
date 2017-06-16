@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Engine
 {
-    public class Weapon : Item
+    public class Weapon : Item  //Child class from Item
     {
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }
+
+        //Constructor for setting up Weapon
+        public Weapon(int id, string name, string namePlural, int minimumDamage, int maximumDamage)
+            : base(id, name, namePlural)
+        {
+            MinimumDamage = minimumDamage;
+            MaximumDamage = maximumDamage;
+        }
     }
 }
